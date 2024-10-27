@@ -1,0 +1,32 @@
+Description : When flight overbooked problem occurs then the administration should come 
+into a conclusion that who would get the high priority.That is why we are taking many
+ parameters from the customer like how many milages he travelled from this travel
+ agency,how many years he is been a member of this agency,and his position of the queue.
+After having all those attributes we calculate the priority assuming a equation.
+We put all the values of passengers in a text file then show this actual list with the 
+sequence.Then we calculate all the priority for individual passenger using the calc_prior()
+ funtion then coparing among them using heap_up() and heap_down()
+function we reallocate the sequence.then using finallist() function we show the list.
+
+function details:-
+
+calc_prior(): It will take the paremeter of the last sequence number and calculate the 
+priority using this equation " priority=(milage/1000)+years-sequence; ".
+
+heap_up():It will take the paremeter of the sequence number minus one and devide the 
+paremeter by two and check the priority number of the two index.If last value is 
+greater than the middle then swap the values.and do this operation 
+recursively untill the paremeter is less than one.
+
+heap_down():This operation executes for the whole vector list.
+final_list():It wiill take the size of the vector list then show list with the priority. 
+
+
+
+Future work: Our application has some limitations that it takes all the values of the total passenger together.If any new passenger booked flight it won,t show the valules.we need to recalculate the whole data for the priority list.We
+will workon this in future to avoid the recalculation and it will able to take one record and then to show the priority list.
+
+
+Conclusion:Our ultimate goal is to give a priority list which can satisfy each and everyone.That is why we took many paremeters and we need to let the customer know about the rule and regulation that how we calculate the priority list.
+We did it just to ensure everyone,s priority.This list will help the customer to make proper decission and hope it would make their travel easy.   
+
